@@ -9,8 +9,10 @@ class AnalyticsController < ApplicationController
                 AND position(s1.search_term in s2.search_term) = 1)
             GROUP BY search_term
             ORDER BY COUNT(search_term) DESC"
+
+    # Incomplete searches are on per user basis! Handle this!   
     @top_searches = ActiveRecord::Base.connection.execute(query).to_a
-    
+
     respond_to do |format|
       format.html { render partial: 'show' }
     end
