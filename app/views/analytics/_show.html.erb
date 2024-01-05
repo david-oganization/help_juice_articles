@@ -1,6 +1,6 @@
 <div>
   <h3>Trending Searches</h3>
-  <% @top_searches.each do |search_term, value| %>
-    <p><%= search_term  %> - <%= value %></p>
+  <% @top_searches.each do |search| %>
+    <p><%= search['search_term']  %> - <%= search['count'] %></p>
   <% end %>
 </div>
