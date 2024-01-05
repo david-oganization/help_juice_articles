@@ -7,7 +7,6 @@ class SearchesController < ApplicationController
   def create
     search_term = params[:search_term]
     last_search = Search.where(user_ip: request.remote_ip).last
-    debugger
     if last_search && search_term.present? && search_term.start_with?(last_search&.search_term)
       last_search.update(search_term: search_term)
     elsif search_term.present?

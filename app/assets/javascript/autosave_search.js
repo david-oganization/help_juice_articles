@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
   inputField.addEventListener('input', function() {
     clearTimeout(inputTimer);
     inputTimer = setTimeout(performSearch, inputProcessingInterval);
+    refreshTrendingSearches();
   });
 
   function performSearch() {
@@ -25,5 +26,24 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     };
     xhr.send('search_term=' + encodeURIComponent(searchTerm));
-}
+  }
+
+  function refreshTrendingSearches() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '/analytics', true);
+    xhr.onreadystatechange = function() {
+      if (xhr.readyState == XMLHttpRequest.DONE) {
+        if (xhr.status == 200) {
+          console.log('Trending Searches:', xhr.response)
+          // var trendingSearches = JSON.parse(xhr.responseText);
+          trendingSearches = xhr.response
+          var trendingSearchesList = document.getElementById('trending_searches');
+          trendingSearchesList.innerHTML = trendingSearches;
+        } else {
+          console.error('Error refreshing trending searches:', xhr.status);
+        }
+      }
+    };
+    xhr.send();
+  }
 });
