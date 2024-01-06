@@ -1,14 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
   var inputTimer;                
-  var inputProcessingInterval = 100;
+  var inputProcessingInterval = 200;
   var inputField = document.getElementById('search_term');
 
-  console.log('Autosave search enabled');
-
+  refreshTrendingSearches();
   inputField.addEventListener('input', function() {
+    refreshTrendingSearches();
     clearTimeout(inputTimer);
     inputTimer = setTimeout(performSearch, inputProcessingInterval);
-    refreshTrendingSearches();
   });
 
   function performSearch() {
@@ -17,13 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     xhr.open('POST', '/searches', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onreadystatechange = function() {
-      if (xhr.readyState == XMLHhttpRequest.DONE) {
-        if (xhr.status == 200) {
-          console.log('Search Saved Successfully:', xhr.responseText);
-        } else {
-          console.error('Error saving search:', xhr.status);
-        }
-      }
+      refreshTrendingSearches();
     };
     xhr.send('search_term=' + encodeURIComponent(searchTerm));
   }
@@ -34,8 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
     xhr.onreadystatechange = function() {
       if (xhr.readyState == XMLHttpRequest.DONE) {
         if (xhr.status == 200) {
-          console.log('Trending Searches:', xhr.response)
-          // var trendingSearches = JSON.parse(xhr.responseText);
           trendingSearches = xhr.response
           var trendingSearchesList = document.getElementById('trending_searches');
           trendingSearchesList.innerHTML = trendingSearches;
