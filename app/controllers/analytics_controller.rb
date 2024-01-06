@@ -7,4 +7,3 @@ class AnalyticsController < ApplicationController
     end
   end
 end
-    # # Incomplete searches are on per user basis! Handle this!   

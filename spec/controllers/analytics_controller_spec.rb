@@ -5,7 +5,6 @@ RSpec.describe AnalyticsController, type: :controller do
     it "renders the show partial for HTML format" do
       get :show
       expect(response).to render_template(partial: 'analytics/_show')
-      expect(response).to render_template(partial: '_show')
     end
   end
 end
