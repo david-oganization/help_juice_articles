@@ -85,3 +85,5 @@ test:
 production:
   <<: *default
   database: help_juice_articles_production
+  username: help_juice_articles
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
