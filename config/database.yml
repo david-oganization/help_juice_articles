@@ -84,4 +84,4 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  database: help_juice_articles_production
