@@ -5,12 +5,15 @@ class SearchesController < ApplicationController
   end
 
   def create
-    search_term = params[:search_term]
+    search_term = search_params[:search_term]
     if search_term.present?
       Search.create(search_term: search_term, user_ip: request.remote_ip)
     end
     head :ok
   end
 
-  # whitelist params in all controllers
+  private
+  def search_params
+    params.permit(:search_term)
+  end
 end
