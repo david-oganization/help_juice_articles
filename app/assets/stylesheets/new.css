@@ -1,4 +1,4 @@
-#search_term{
+#search_term {
   width: 330px;
   height: 30px;
   border: 1px solid #ccc;
@@ -10,7 +10,7 @@
   margin-left: 40%;
 }
 
-#trending_searches{
+#trending_searches {
   border: 1px solid #000;
   width: 300px;
   border-radius: 5px;
