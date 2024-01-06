@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     xhr.onreadystatechange = function() {
       if (xhr.readyState == XMLHttpRequest.DONE) {
         if (xhr.status == 200) {
-          trendingSearches = xhr.response
+          var trendingSearches = xhr.response
           var trendingSearchesList = document.getElementById('trending_searches');
           trendingSearchesList.innerHTML = trendingSearches;
         } else {
