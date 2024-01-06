@@ -1,14 +1,14 @@
 <a name="readme-top"></a>
 
 <div align="center">
-<h1> <b>Rail-blog-app</b> <hr/>
+<h1> <b>Help_Juice_Articles</b> <hr/>
 
 </div>
 
 # 📗 Table of Contents
 
 - [� Table of Contents](#-table-of-contents)
-- [📖 \[Rails-blog-app\] ](#-rails-blog-app-)
+- [📖 \[Help_Juice_Articles\] ](#-help_juice_articles-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
   - [Key Features ](#key-features-)
@@ -30,10 +30,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Rails-blog-app] <a name="about-project"></a>
+# 📖 [Help_Juice_Articles] <a name="about-project"></a>
 
-> ## The **Rails-blog-app** project 'BlogApp' app is a Ruby on Rails based that allows Users to make a comment on posts, like the posts and posts as well.
-
+> ## The **Help_Juice_Articles** is a realtime application that allows users to search articles, and then to have analytics that display what users were searching for.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -43,6 +42,7 @@
   <ul>
     <li><p> <b>Ruby: </b> The primary programming language for the project.</p></li>
     <li><p><b>Rails: </b> It is a ruby frameworks.</p></li>
+     <li><p><b>JavaScript: </b>It handles dynamic interactivity of the application</p></li>
   </ul>
 </details>
 
@@ -64,10 +64,8 @@
 
 ## Key Features <a name="key-features"></a>
 
-- Users functionality
-- Comments section
-- Like section
-- Post section
+- Search Box
+- Analytics
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,8 +81,8 @@
 In order to run this project you need:
 
 - A Computer (MAC or PC)
-- Code editor (VSCode,Atom etc...)
-- A browser (Chrome,Mozilla,Safari etc...)
+- Code editor (VSCode, Atom etc...)
+- A browser (Chrome, Mozilla, Safari etc...)
 - Version Control System (Git and Github)
 - Rails installed: To run a Rails project, users must have Rails installed on their system. You can include the minimum required version of Rails needed to run the project.
 
@@ -94,7 +92,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:david30-maker/rails-blog-app.git
+  git clone git@github.com:david30-maker/helpjuice_app.git
 ```
 
 ## Install
@@ -116,6 +114,7 @@ Navigate to the root directory where the Rails file is stored using the cd comma
 Type the following command to run the Ruby file:
 
 ```sh
+bundle install
 rails server
 ```
 
@@ -143,10 +142,6 @@ rspec spec/filename.rb
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ]   Processing data
-- [ ] Add controller and view components
-- [ ] Add authorization
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -167,26 +162,11 @@ rspec spec/filename.rb
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> We would like to thank the [Microverse team](https://www.microverse.org/) for allowing me to work on this Rails BlogApp project.
+> We would like to thank Helpjuice for this opportunity giving to me to work on this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
-
 ## ❓ FAQ <a name="faq"></a>
-
-- **How do I install and run the project?**
-
-  - To install and run the project, you will need to have Rails installed on your computer. Once you have Rails installed, you can download the project files and run the program from the command line using the following command:
-    <br/>
-
-- **What technologies and libraries are used in the project?**
-
-  - The project is written in Ruby on Rails and does not require any external libraries or dependencies.
-
-- **How can I contribute to the project?**
-
-  - Contributions to the project are welcome! Please feel free to submit bug reports, feature requests, or pull requests on the project's GitHub repository.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
