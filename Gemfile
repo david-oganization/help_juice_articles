@@ -51,6 +51,10 @@ group :test do
   gem 'webdrivers'
 end
 
+group :production do
+  gem 'rails_12factor', group: :production
+end
+
 gem 'rails-controller-testing'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
