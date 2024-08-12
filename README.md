@@ -118,7 +118,6 @@ To run all specs in this project, run this command from your terminal:
 ```sh
 rspec
 ```
-
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
