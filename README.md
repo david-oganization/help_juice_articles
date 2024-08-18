@@ -88,7 +88,6 @@ Clone this repository to your desired folder:
   cd my-folder
   git clone git@github.com:david30-maker/help_juice_articles.git
 ```
-
 ## Install
 
 Install rails with:
