@@ -110,7 +110,6 @@ Type the following command to run the Ruby file:
 bundle install
 rails server
 ```
-
 ## How to run tests
 To run all specs in this project, run this command from your terminal:
 ```sh
